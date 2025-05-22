@@ -7,7 +7,7 @@ const Form = ({ handleSubmit, handleChange, isFirstRender }) => {
     
     useEffect(() => {
       !isFirstRender && divRef.current.focus()
-    }, [])
+    })
   return (
     <div className="form-container" ref={divRef} tabIndex={-1}>
       <form className="wrapper">

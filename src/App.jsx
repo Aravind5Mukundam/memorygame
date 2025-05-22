@@ -1,4 +1,4 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import MemoryCard from "./components/MemoryCard";
@@ -35,7 +35,7 @@ function App() {
     if (emojisData.length && matchedCards.length === emojisData.length) {
       setAreAllCardsMatched(true);
     }
-  }, [emojisData.length, matchedCards]);
+  }, [emojisData,matchedCards]);
 
   const handleFormChange = (e) => {
     setFormData((prevFormData) => ({
