@@ -69,7 +69,7 @@ export default function App() {
             saveLeaderboard(updated)
             setLeaderboard(updated)
         }
-    }, [matchedCards])
+    }, [matchedCards,emojisData, elapsedTime, playerName])
 
     function handleFormChange(e) {
         setFormData(prevFormData => ({ ...prevFormData, [e.target.name]: e.target.value }))
