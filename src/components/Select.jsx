@@ -1,8 +1,8 @@
-import React from 'react'
 import { data } from '../data/data'
 import Option from './Option'
-const Select = ({handleChange}) => {
-    const selectEl = Object.entries(data).map(([ key, value]) => (
+
+export default function Select({ handleChange }) {
+    const selectEl = Object.entries(data).map(([key, value]) => (
         <div key={key} className="form__inner-wrapper">
             <label htmlFor={key}>Select a {key}</label>
             <select
@@ -10,13 +10,10 @@ const Select = ({handleChange}) => {
                 id={key}
                 onChange={handleChange}
             >
-                 <Option valueArray={value} />
+                <Option valueArray={value} />
             </select>
         </div>
     ))
-  return (
-    <>{selectEl}</>
-  )
-}
 
-export default Select
+    return <>{selectEl}</>
+}
